@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+	<script>
+		function str(t,s){
+//			var first="this is mya component aaaaa"
+//			var secend="this is  second homework mya aaaaa"
+			//将俩个字符创通过split方法变为数组
+			var arr1=t.split(" ");
+			var arr2=s.split(" ");
+			//生明一个空数组来放置俩个数组里相同的单词
+			var arr3=[];
+			//通过双重循坏找出相同的单词
+			for(var i=0;i<arr1.length;i++){
+				for(var j=0;j<arr2.length;j++){
+					if(arr1[i]===arr2[j]){
+						arr3.push(arr1[i])						
+					}
+				}
+			}
+			//通过sort排序使数组里的字符按照长度从大到小排序，结果取其下标1的结果即可
+			arr3.sort(function(x,y){
+				return x.length<y.length
+			})
+			console.log(arr3)
+			console.log(arr3[1])			
+		}
+		str("this is mya component aaaaa bbbbbbbbbbbbbbbbbbbb","this is  second homework mya aaaaa bbbbbbbbbbbbbbbbbbbb")
+	</script>
+</body>
+</html>
